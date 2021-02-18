@@ -27,10 +27,10 @@ h1{
     box-sizing: border-box;
   }
 
-h1{
+/*h1{
     font-size: 3rem;
     text-align: center;
-}
+}*/
 
 .flex-outer,
 .flex-inner {
