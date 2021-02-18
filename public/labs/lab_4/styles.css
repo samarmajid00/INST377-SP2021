@@ -1,0 +1,86 @@
+body {
+    font: normal 18px/1.5 "Arial";
+    background-color: rgb(99, 233, 121);
+    padding: 50px 0;
+}
+/*.wrapper {
+  margin-right: auto; 
+  margin-left:  auto; 
+  max-width: 960px; 
+  padding-right: 10px;
+  padding-left:  10px;
+}*/
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .container * {
+    box-sizing: border-box;
+  }
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li > label, .flex-outer li p {
+    flex: 1 0 125px;
+    max-width: 225px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+    flex: 1 0 225px;
+}
+
+.flex-outer > li > button {
+    margin-left: 0px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 3px;
+}
+
+.flex-inner li {
+    width: 80px;
+}
+
+.flex-inner {
+    justify-content: space-between;
+}
+
+.flex-outer > li > label, .flex-outer li p {
+    padding: 8px;
+}
+

@@ -3,7 +3,7 @@ describe('Lab 4', () => {
   it('Successfully loads with valid HTML', () => {
     cy.fixture('test_values').then((json) => {
       const labUrl = `${json.test_context || ''}labs/lab_4/`;
-      cy.visit(labUrl); // change URL to match your dev URL
+      cy.visit('https://shielded-woodland-08617.herokuapp.com/labs/lab_4/'); // change URL to match your dev URL
       cy.htmlvalidate();
     });
   });
@@ -131,7 +131,7 @@ describe('Lab 4', () => {
 
   it('Should receive a string containing "Hello World" from the server - use res.send from Express docs for this', () => {
     cy.fixture('test_values').then((json) => {
-      const labUrl = `${json.test_context || ''}/lab_4/`;
+      const labUrl = `${json.test_context || ''}labs/lab_4/`;
       cy.visit(labUrl);
       cy.get('button[type=submit]')
         .click();

@@ -1,6 +1,6 @@
 // These are our required libraries to make the server work.
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
+//eslint-disable no-console 
+//eslint-disable no-unused-vars 
 import path from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 });
 
 app.route('/api')
-  .get(async (req, res) => {
+  .get(async(req, res) => {
     console.log('GET request detected');
     const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
     const json = await data.json();
@@ -43,7 +43,8 @@ app.route('/api')
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
     console.log('Now send something back to your client');
-    // res.json({data: dataToSendToFrontEnd});
+    res.send('Hello World');
+    //res.json({data: dataToSendToFrontEnd});
   });
 
 app.listen(port, async () => {
@@ -55,3 +56,7 @@ liveReloadServer.server.once('connection', () => {
     liveReloadServer.refresh('/');
   }, 100);
 });
+
+
+
+
