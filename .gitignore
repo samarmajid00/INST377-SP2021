@@ -2,7 +2,11 @@
 # Course specific
 # -------------------------------------------------
 public/answer_key/private
+<<<<<<< HEAD
 .env
+=======
+public/demos/*
+>>>>>>> upstream/main
 
 # -------------------------------------------------
 # Example specs from Cypress
