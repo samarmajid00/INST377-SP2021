@@ -46,10 +46,6 @@ app.route('/api')
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
     console.log('Now send something back to your client');
-<<<<<<< HEAD
-    res.send('Hello World');
-    //res.json({data: dataToSendToFrontEnd});
-=======
     const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
     const json = await data.json();
 
@@ -61,24 +57,12 @@ app.route('/api')
       .catch((err) => console.error(err));
 
     res.json({data: json});
->>>>>>> upstream/main
   });
 
 app.listen(port, async () => {
   console.log(`Example app listening on port ${port}!`);
 });
 
-<<<<<<< HEAD
-liveReloadServer.server.once('connection', () => {
-  setTimeout(() => {
-    liveReloadServer.refresh('/');
-  }, 100);
-});
-
-
-
-
-=======
 if (process.env.CONTEXT === 'development') {
   liveReloadServer.server.once('connection', () => {
     setTimeout(() => {
@@ -86,4 +70,3 @@ if (process.env.CONTEXT === 'development') {
     }, 100);
   });
 }
->>>>>>> upstream/main
